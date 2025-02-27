@@ -23,11 +23,8 @@ public class Solution {
         public void catchCat(Cat cat) {
             System.out.println("Кошка поймана");
 
-            Cat cat1 = new Cat();
-            Dog dog1 = new Dog();
-
-            dog1.sayHello();
-            cat1.sayHello();
+            sayHello();
+            cat.sayHello();
         }
     }
 }
