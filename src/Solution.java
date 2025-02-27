@@ -1,9 +1,9 @@
 public class Solution {
     public static void main(String[] args) {
-
         Cat.sayHello();
         Dog.sayHello();
-        Dog.catchCat();
+        Dog.catchCat(new Cat());
+
 
     }
 
@@ -19,7 +19,7 @@ public class Solution {
             System.out.println("Гав");
         }
 
-        public static void catchCat() {
+        public static void catchCat(Cat cat) {
             System.out.println("Кошка поймана");
             Dog.sayHello();
             Cat.sayHello();
