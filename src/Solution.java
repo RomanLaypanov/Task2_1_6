@@ -1,28 +1,33 @@
 public class Solution {
     public static void main(String[] args) {
-        Cat.sayHello();
-        Dog.sayHello();
-        Dog.catchCat(new Cat());
+        Cat cat = new Cat();
+        Dog dog = new Dog();
 
-
+        cat.sayHello();
+        dog.sayHello();
+        dog.catchCat(cat);
     }
 
     public static class Cat {
-        public static void sayHello() {
+        public void sayHello() {
             System.out.println("Мяу");
         }
     }
 
     public static class Dog {
 
-        public static void sayHello() {
+        public void sayHello() {
             System.out.println("Гав");
         }
 
-        public static void catchCat(Cat cat) {
+        public void catchCat(Cat cat) {
             System.out.println("Кошка поймана");
-            Dog.sayHello();
-            Cat.sayHello();
+
+            Cat cat1 = new Cat();
+            Dog dog1 = new Dog();
+
+            dog1.sayHello();
+            cat1.sayHello();
         }
     }
 }
